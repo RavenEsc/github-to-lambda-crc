@@ -8,7 +8,10 @@ def lambda_handler(event, context):
         Key={
             'key': 'visitor-counter'
         },
-        UpdateExpression='ADD count :increment',
+        UpdateExpression='ADD #c :increment',
+        ExpressionAttributeNames={
+            "#c": "count"
+        },
         ExpressionAttributeValues={
             ':increment': 1
         },
