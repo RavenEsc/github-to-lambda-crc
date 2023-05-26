@@ -1,6 +1,6 @@
 # Libraries added for AWS, json, and time
 import boto3
-import json
+# import json
 from time import gmtime, strftime
 
 # variable for Lambda_handler2 func, to set what time it is currently
@@ -26,7 +26,7 @@ def lambda_handler(event, context):
         ReturnValues='UPDATED_NEW'
     )
 
-    global count
+    # global count
     count = response['Attributes']['count']
 
     return {
