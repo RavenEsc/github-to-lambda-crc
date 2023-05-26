@@ -1,7 +1,7 @@
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table(helloWorldVisitorCounter)
+table = dynamodb.Table('helloWorldVisitorCounter')
 
 def lambda_handler(event, context):
     response = table.update_item(
