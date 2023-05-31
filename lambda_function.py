@@ -29,9 +29,14 @@ def lambda_handler(event, context):
     # global counter
     counter = response['Attributes']['count']
 
+    print(counter)
     return {
-        'statusCode': 200,
-        'body': json.dumps(str(counter))
+        "statusCode": 200,
+        "body": json.dumps(counter),
+    "headers": {
+            "Access-Control-Allow-Origin": "https://www.ravens-resume-crc.com",
+            "Content-Type": "application/json"
+        }
     }
 
 # # Func for showing when the site was visited in lambda by number (toa=time of arrival), then sends a json dump back to the site
