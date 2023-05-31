@@ -28,11 +28,12 @@ def lambda_handler(event, context):
 
     # global counter
     counter = response['Attributes']['count']
-
+    json_data = {'counter': int(counter)}
+    
     print(counter)
     return {
         "statusCode": 200,
-        "body": json.dumps(counter),
+        "body": json.dumps(json_data),
     "headers": {
             "Access-Control-Allow-Origin": "https://www.ravens-resume-crc.com",
             "Content-Type": "application/json"
