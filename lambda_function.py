@@ -35,7 +35,9 @@ def lambda_handler(event, context):
         "statusCode": 200,
         "body": json.dumps(json_data),
     "headers": {
-            "Access-Control-Allow-Origin": "https://www.ravens-resume-crc.com",
+            "Access-Control-Allow-Origin": "https://qhprvxnsc2mevqyafltbfb3ch40xemev.lambda-url.us-east-2.on.aws/",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
             "Content-Type": "application/json"
         }
     }
