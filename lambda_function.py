@@ -1,10 +1,10 @@
 # Libraries added for AWS, json, and time
 import boto3
 import json
-from time import gmtime, strftime
+# from time import gmtime, strftime
 
 # variable for Lambda_handler2 func, to set what time it is currently
-now = strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
+# now = strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
 
 # variables for attaching the dynamodb table
 dynamodb = boto3.resource('dynamodb')
@@ -41,17 +41,3 @@ def lambda_handler(event, context):
             "Content-Type": "application/json"
         }
     }
-
-# # Func for showing when the site was visited in lambda by number (toa=time of arrival), then sends a json dump back to the site
-# def lambda_handler(event, context):
-#     response = table.put_item(
-#         Item={
-#             'count': str(count),
-#             'VisitedTime': now
-#             }
-#     )
-    
-#     return {
-#         'statusCode': 200,
-#         'body': json.dumps("Hello from Lambda, No." + str(count) + ", at " + str(now) + ".")
-#     }
