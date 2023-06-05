@@ -33,7 +33,7 @@ def lambda_handler(event, context):
     print(counter)
     return {
         "statusCode": 200,
-        "body": json.dumps(json_data),
+        "body": json_data,
     "headers": {
             "Access-Control-Allow-Origin": "https://www.ravens-resume-crc.com",
             "Access-Control-Allow-Headers": "Content-Type",
