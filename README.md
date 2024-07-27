@@ -1,4 +1,2 @@
-# github-to-lambda-crc
-the provisioned code for CI
-
-Code written with the help of CODEGPT
+# github-to-lambda-crc (Cloud Resume Challenge)
+The provisioned code for my lambda counter for the prebuilt resume website.
